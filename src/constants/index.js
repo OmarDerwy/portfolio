@@ -97,10 +97,6 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
@@ -198,68 +194,129 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "InTrack AI",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Django/React Native project that implements GPS tracking and employs an AI model.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react-native",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ai",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent, // placeholder, update as needed
+    source_code_link: "https://github.com/OmarDerwy/ITI-Attendance-FrontendRN",
+  },
+  {
+    name: "Bookstore",
+    description:
+      "MERN project that implements paymob, utilizes the entire stack and is deployed on Vercel.",
+    tags: [
+      {
+        name: "mern",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "paymob",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vercel",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit, // placeholder, update as needed
+    source_code_link: "https://github.com/OmarDerwy/ITIProject-GoodReads-Front",
+  },
+  {
+    name: "Homes",
+    description:
+      "Vanilla JS real estate site. Similar to nawy. Lets users list properties for other people to buy.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "real-estate",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vanilla-js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide, // placeholder, update as needed
+    source_code_link: "https://github.com/OmarDerwy/ITIProject-eCommerce",
+  },
+  {
+    name: "Movie catalogue project",
+    description:
+      "React project that lets users browse through movies and wish-list them.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "movies",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "wishlist",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: carrent, // placeholder, update as needed
+    source_code_link: "https://github.com/OmarDerwy/movie-app",
   },
   {
-    name: "Job IT",
+    name: "DBMS project",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Using bash, implemented a database management system. Allows users to add and query data.",
     tags: [
       {
-        name: "react",
+        name: "bash",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "dbms",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "cli",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: jobit, // placeholder, update as needed
+    source_code_link: "https://github.com/OmarDerwy/ITIProject-BashDBMS",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const dev_name = "Omar Elderwy";
+const brief =
+  "A passionate Full Stack Developer with expertise in React.js, Node.js, and MongoDB, dedicated to building scalable web applications.";
+const introduction =
+  "As a Full Stack Developer, I excel at building dynamic, responsive web applications with modern technologies. I specialize in React.js for the frontend and Node.js or Django for the backend, utilizing PostgreSQL or MongoDB for robust data management. My focus is on delivering high-quality, scalable solutions that align with user needs and drive business success.";
+// const introduction = `I'm a skilled software developer with experience in TypeScript and
+//         JavaScript, and expertise in frameworks like React, Node.js, and
+//         Three.js. I'm a quick learner and collaborate closely with clients to
+//         create efficient, scalable, and user-friendly solutions that solve
+//         real-world problems. Let's work together to bring your ideas to life!`;
+export {
+  dev_name,
+  brief,
+  introduction,
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+};
