@@ -41,6 +41,7 @@ const Contact = () => {
           from_email: form.email,
           to_email: "omarderwy@gmail.com",
           message: form.message,
+          time: new Date().toLocaleString(),
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
