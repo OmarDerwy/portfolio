@@ -57,7 +57,8 @@ const Navbar = () => {
 
         {/* Desktop navigation links */}
         <ul className='list-none hidden sm:flex flex-row gap-10 flex-1 justify-end items-center'>
-          <a href="https://www.overleaf.com/download/project/67c8203fc388149bffd630fe/build/197a8d8e7cc-3d669e0e7da7666f/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-c-f-2jq6&enable_pdf_caching=true&popupDownload=true">
+          <a href="https://drive.google.com/file/d/1AiRpSDFofWueg0du5gVDTx3Kflv-Ma_K/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          
             <div className="rounded-full px-4 py-2 bg-secondary hover:bg-purple-100 transition-colors duration-300">
               <li
                 className='text-black text-[18px] font-medium cursor-pointer'
