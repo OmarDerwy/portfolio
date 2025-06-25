@@ -5,11 +5,14 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
+// Navbar component definition
 const Navbar = () => {
-  const [active, setActive] = useState("");
+  // State for toggling the mobile menu
   const [toggle, setToggle] = useState(false);
+  // State for tracking if the navbar is scrolled
   const [scrolled, setScrolled] = useState(false);
 
+  // Effect to handle navbar background on scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -22,23 +25,26 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Cleanup scroll event listener on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Render the navbar
   return (
     <nav
       className={`${
         styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+        scrolled ? "bg-primary" : "bg-transparent" // Make navbar transparent when not scrolled
       }`}
     >
+      {/* Navbar container */}
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+        {/* Logo and site title, clicking resets active and scrolls to top */}
         <Link
           to='/'
           className='flex items-center gap-2'
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
           }}
         >
@@ -49,21 +55,33 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        {/* Desktop navigation links */}
+        <ul className='list-none hidden sm:flex flex-row gap-10 flex-1 justify-end items-center'>
+          <div className="rounded-full px-4 py-2 bg-secondary hover:bg-purple-100 transition-colors duration-300">
+            <li
+              className='text-black text-[18px] font-medium cursor-pointer'
+              onClick={() => {
+                // go to CV
+              }}
+            >
+              Get CV
+            </li>
+          </div>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              className={
+                "text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
+              }
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
+        {/* Mobile menu icon and dropdown */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
+          {/* Hamburger or close icon */}
           <img
             src={toggle ? close : menu}
             alt='menu'
@@ -71,8 +89,9 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           />
 
+          {/* Mobile dropdown menu */}
           <div
-            className={`${
+            className={`$${
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
@@ -80,12 +99,11 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className={
+                    "font-poppins font-medium cursor-pointer text-[16px] text-secondary hover:text-white"
+                  }
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>

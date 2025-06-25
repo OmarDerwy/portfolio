@@ -19,9 +19,13 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
+  // carrent,
   jobit,
   tripguide,
+  trackit,
+  bookstore,
+  movie,
+  homes,
   threejs,
 } from "../assets";
 
@@ -31,8 +35,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "works",
+    title: "Works",
   },
   {
     id: "contact",
@@ -211,7 +215,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent, // placeholder, update as needed
+    image: trackit, // placeholder, update as needed
     source_code_link: "https://github.com/OmarDerwy/ITI-Attendance-FrontendRN",
   },
   {
@@ -232,7 +236,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit, // placeholder, update as needed
+    image: bookstore, // placeholder, update as needed
     source_code_link: "https://github.com/OmarDerwy/ITIProject-GoodReads-Front",
   },
   {
@@ -253,11 +257,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide, // placeholder, update as needed
+    image: homes, // placeholder, update as needed
     source_code_link: "https://github.com/OmarDerwy/ITIProject-eCommerce",
   },
   {
-    name: "Movie catalogue project",
+    name: "Movie catalogue",
     description:
       "React project that lets users browse through movies and wish-list them.",
     tags: [
@@ -274,30 +278,30 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent, // placeholder, update as needed
+    image: movie, // placeholder, update as needed
     source_code_link: "https://github.com/OmarDerwy/movie-app",
   },
-  {
-    name: "DBMS project",
-    description:
-      "Using bash, implemented a database management system. Allows users to add and query data.",
-    tags: [
-      {
-        name: "bash",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "dbms",
-        color: "green-text-gradient",
-      },
-      {
-        name: "cli",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit, // placeholder, update as needed
-    source_code_link: "https://github.com/OmarDerwy/ITIProject-BashDBMS",
-  },
+  // {
+  //   name: "DBMS project",
+  //   description:
+  //     "Using bash, implemented a database management system. Allows users to add and query data.",
+  //   tags: [
+  //     {
+  //       name: "bash",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "dbms",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "cli",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: jobit, // placeholder, update as needed
+  //   source_code_link: "https://github.com/OmarDerwy/ITIProject-BashDBMS",
+  // },
 ];
 
 const dev_name = "Omar Elderwy";
