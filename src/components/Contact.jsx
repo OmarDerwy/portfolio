@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { toast } from "sonner";
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,6 +30,21 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validation logic moved here
+    if (form.name.trim() === "") {
+      toast.error("Please enter your name.");
+      return;
+    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(form.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    if (form.message.trim() === "") {
+      toast.error("Please enter your message.");
+      return;
+    }
     setLoading(true);
 
     emailjs
@@ -80,6 +96,7 @@ const Contact = () => {
           ref={formRef}
           onSubmit={handleSubmit}
           className='mt-12 flex flex-col gap-8'
+          noValidate
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
