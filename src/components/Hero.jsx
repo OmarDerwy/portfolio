@@ -6,6 +6,8 @@ import { ComputersCanvas } from "./canvas";
 import { dev_name, brief } from "../constants";
 
 const Hero = () => {
+  const isMobile = window.innerWidth <= 640;
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -26,7 +28,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {!isMobile && <ComputersCanvas />}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
