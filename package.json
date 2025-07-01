@@ -2,7 +2,7 @@
   "name": "3dfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://omarderwy.github.io/portfolio",
+  "homepage": "https://omarelderwy.is-a.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
