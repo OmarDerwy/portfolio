@@ -39,32 +39,32 @@ const Navbar = () => {
       }`}
     >
       {/* Navbar container */}
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo and site title, clicking resets active and scrolls to top */}
         <Link
-          to='/'
-          className='flex items-center gap-2'
+          to="/"
+          className="flex items-center gap-2"
           onClick={() => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             Omar &nbsp;
-            <span className='sm:block hidden'> | Full Stack Developer</span>
+            <span className="sm:block hidden"> | Full Stack Developer</span>
           </p>
         </Link>
 
         {/* Desktop navigation links */}
-        <ul className='list-none hidden sm:flex flex-row gap-10 flex-1 justify-end items-center'>
-          <a href="https://drive.google.com/file/d/1AiRpSDFofWueg0du5gVDTx3Kflv-Ma_K/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-          
+        <ul className="list-none hidden sm:flex flex-row gap-10 flex-1 justify-end items-center">
+          <a
+            href="https://drive.google.com/file/d/1AiRpSDFofWueg0du5gVDTx3Kflv-Ma_K/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="rounded-full px-4 py-2 bg-secondary hover:bg-purple-100 transition-colors duration-300">
               <li
-                className='text-black text-[18px] font-medium cursor-pointer'
-                onClick={() => {
-                  // go to CV
-                }}
+                className="text-black text-[18px] font-medium cursor-pointer"
               >
                 Get CV
               </li>
@@ -83,12 +83,12 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile menu icon and dropdown */}
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className="sm:hidden flex flex-1 justify-end items-center">
           {/* Hamburger or close icon */}
           <img
             src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
@@ -98,7 +98,20 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              <a
+                href="https://drive.google.com/file/d/1AiRpSDFofWueg0du5gVDTx3Kflv-Ma_K/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="rounded-full px-4 py-2 bg-secondary hover:bg-purple-100 transition-colors duration-300">
+                  <li
+                    className="text-black text-[18px] font-medium cursor-pointer"
+                  >
+                    Get CV
+                  </li>
+                </div>
+              </a>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
